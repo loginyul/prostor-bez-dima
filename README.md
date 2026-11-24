@@ -16,7 +16,7 @@
 
 ### О знаку
 
-**„Простор без дима“** је ауторски знак који је креирала **IULIIA LOGINOVA** за просторе у којима се не пуши. Намењен је кафићима, канцеларијама, студијима, заједничким просторијама и другим местима која желе да истакну да негују окружење без дуванског дима.
+**„Простор без дима“** је ауторски знак који је креирала **IULIIA LOGINOVA** за просторе у којима се не пуши, као и за просторије са пречишћеним ваздухом. Намењен је кафићима, канцеларијама, студијима, заједничким просторијама и другим местима која желе да истакну бригу о чистом ваздуху и пријатном боравку.
 
 Насмејани облак, зелени листови и кров симболизују чист ваздух, бригу и пријатан простор за све. Натпис је на српском језику, ћирилицом. Знак преноси поруку на пријатељски начин, кроз позитивне асоцијације.
 
@@ -48,7 +48,7 @@
 
 ### О знаке
 
-**«Простор без дима»** — авторский знак **IULIIA LOGINOVA** для пространств, в которых не курят. Он подходит для кафе, офисов, студий, общих помещений и других мест, где хотят подчеркнуть заботу о пространстве без табачного дыма.
+**«Простор без дима»** — авторский знак **IULIIA LOGINOVA** для пространств, где не курят, а также для помещений с очищенным воздухом. Он подходит для кафе, офисов, студий, общих помещений и других мест, где хотят подчеркнуть заботу о чистом воздухе и комфортной атмосфере.
 
 Улыбающееся облако, зелёные листья и крыша символизируют чистый воздух, заботу и уютное пространство для всех. Надпись выполнена на сербском языке кириллицей и означает **«Пространство без дыма»**. Знак передаёт эту мысль дружелюбно, через положительные образы.
 
@@ -80,7 +80,7 @@
 
 ### About the sign
 
-**“Prostor bez dima” (Smoke-Free Space)** is an original sign created by **IULIIA LOGINOVA** for places where smoking is not allowed. It is suitable for cafés, offices, studios, shared spaces and other venues that want to communicate their commitment to a space free from tobacco smoke.
+**“Prostor bez dima” (Smoke-Free Space)** is an original sign created by **IULIIA LOGINOVA** for smoke-free spaces and for indoor spaces with purified air. It is suitable for cafés, offices, studios, shared spaces and other venues that want to express their commitment to clean air and a comfortable environment.
 
 The smiling cloud, green leaves and roof represent clean air, care and a welcoming space for everyone. The lettering is in Serbian Cyrillic and reads **“Smoke-Free Space.”** The design communicates its message through friendly, positive imagery.
 
