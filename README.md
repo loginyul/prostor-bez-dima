@@ -34,11 +34,13 @@
 
 ### Слободна употреба и ауторство
 
-Знак, AI изворна датотека и PNG приказ доступни су под лиценцом **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Можете их бесплатно користити, штампати, делити и мењати, укључујући комерцијалну употребу.
+Знак, AI изворна датотека и PNG приказ доступни су под лиценцом **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Можете их бесплатно користити, штампати, делити и мењати, укључујући комерцијалну употребу. **Дозвољено је превести натпис на други језик или заменити његов текст.**
 
 Наведите ауторку **IULIIA LOGINOVA**, приложите линк ка извору и лиценци и назначите измене, ако их има. Пример навођења:
 
 > „Простор без дима“ — IULIIA LOGINOVA. [Извор](https://github.com/loginyul/prostor-bez-dima). [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Без измена.
+
+За измењену верзију замените „Без измена“ описом измена, на пример: „Натпис је преведен на енглески језик“.
 
 Ауторство можете навести на пратећем материјалу, оближњој ознаци или веб-страници, на начин примерен употреби. Не подразумева се да ауторка подржава вашу организацију или начин употребе знака. Пуни услови су у датотеци [LICENSE](LICENSE).
 
@@ -66,11 +68,13 @@
 
 ### Свободное использование и авторство
 
-Знак, исходный AI-файл и PNG-превью распространяются под лицензией **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Их можно бесплатно использовать, печатать, распространять и изменять, в том числе в коммерческих целях.
+Знак, исходный AI-файл и PNG-превью распространяются под лицензией **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Их можно бесплатно использовать, печатать, распространять и изменять, в том числе в коммерческих целях. **В частности, разрешено переводить надпись на другой язык и менять её текст.**
 
 Укажите автора **IULIIA LOGINOVA**, приложите ссылку на источник и лицензию и отметьте внесённые изменения, если они есть. Пример подписи:
 
 > «Простор без дима» — IULIIA LOGINOVA. [Источник](https://github.com/loginyul/prostor-bez-dima). [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Без изменений.
+
+Для изменённой версии замените «Без изменений» описанием правок, например: «Надпись переведена на английский язык».
 
 Авторство можно указать в сопроводительном материале, на расположенной рядом табличке или веб-странице — способом, уместным для вашего использования. Указание автора не означает, что автор поддерживает вашу организацию или способ использования знака. Полные условия находятся в файле [LICENSE](LICENSE).
 
@@ -98,10 +102,12 @@ For a sticker applied inside a window and read from outside, agree the adhesive 
 
 ### Free use and attribution
 
-The sign, AI source file and PNG preview are licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. You may use, print, share and modify them free of charge, including for commercial purposes.
+The sign, AI source file and PNG preview are licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. You may use, print, share and modify them free of charge, including for commercial purposes. **This includes translating the wording into another language or replacing it.**
 
 Credit **IULIIA LOGINOVA**, link to the source and the licence, and indicate any changes you make. Example credit:
 
 > “Prostor bez dima” — IULIIA LOGINOVA. [Source](https://github.com/loginyul/prostor-bez-dima). [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). No changes made.
+
+For a modified version, replace “No changes made” with a description such as “Lettering translated into English.”
 
 Credit may appear in accompanying material, on a nearby notice or on a webpage, in a manner appropriate to your use. Attribution must not imply that the creator endorses your organisation or your use of the sign. See [LICENSE](LICENSE) for the full terms.
