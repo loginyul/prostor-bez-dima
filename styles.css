@@ -121,3 +121,5 @@ figcaption { display: flex; justify-content: space-between; align-items: center;
   .download { transition: none; }
   .download:hover { transform: none; }
 }
+
+.header-actions{display:flex;align-items:center;justify-content:flex-end;gap:28px;flex-wrap:wrap}.all-projects{font-size:.875rem;text-decoration:none}.all-projects:hover{text-decoration:underline}@media(max-width:650px){.site-header{flex-wrap:wrap;padding:22px 0;gap:18px}.header-actions{width:100%;justify-content:space-between;gap:12px}.all-projects{font-size:.8rem}}
