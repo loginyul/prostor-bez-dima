@@ -2,6 +2,7 @@
 
 const translations = {
   sr: {
+    allProjects: "Сви пројекти ауторке",
     htmlLang: "sr-Cyrl", pageTitle: "Простор без дима — знак за преузимање",
     description: "Знак за просторе без дима и просторије са пречишћеним ваздухом. Преузмите AI и PNG. Ауторка: IULIIA LOGINOVA. Слободна употреба уз CC BY 4.0.",
     skip: "Пређи на садржај", eyebrow: "ЗНАК ЗА ЧИСТ ВАЗДУХ", title: "Простор<br><span>без дима.</span>",
@@ -23,6 +24,7 @@ const translations = {
     licenseLink: "О лиценци", sourceLink: "Извор и све датотеке", createdBy: "Ауторка знака", footer: "Чист ваздух је за све."
   },
   ru: {
+    allProjects: "Все проекты автора",
     htmlLang: "ru", pageTitle: "Простор без дима — скачать знак",
     description: "Знак для мест, где не курят, и помещений с очищенным воздухом. Скачать AI и PNG. Автор: IULIIA LOGINOVA. Свободное использование по CC BY 4.0.",
     skip: "Перейти к содержимому", eyebrow: "ЗНАК ЧИСТОГО ВОЗДУХА", title: "Пространство<br><span>без дыма.</span>",
@@ -44,6 +46,7 @@ const translations = {
     licenseLink: "Условия лицензии", sourceLink: "Исходник и все файлы", createdBy: "Автор знака", footer: "Чистый воздух — для всех."
   },
   en: {
+    allProjects: "All projects by the creator",
     htmlLang: "en", pageTitle: "Smoke-Free Space — download the sign",
     description: "A friendly sign for smoke-free spaces and spaces with purified air. Download AI and PNG. Created by IULIIA LOGINOVA. Free to use under CC BY 4.0.",
     skip: "Skip to content", eyebrow: "A SIGN FOR CLEAN AIR", title: "A space<br><span>without smoke.</span>",
@@ -88,10 +91,11 @@ function setLanguage(language, updateUrl = true) {
   document.getElementById("license-link").href = languageKey === "ru"
     ? "https://creativecommons.org/licenses/by/4.0/deed.ru"
     : "https://creativecommons.org/licenses/by/4.0/";
+  document.querySelector('.all-projects').href = 'https://loginyul.github.io/?lang=' + languageKey;
+  try { localStorage.setItem('loginyul-language', languageKey); } catch (_) {}
   if (updateUrl) {
     const url = new URL(window.location.href);
-    if (languageKey === "sr") url.searchParams.delete("lang");
-    else url.searchParams.set("lang", languageKey);
+    url.searchParams.set("lang", languageKey);
     window.history.replaceState(null, "", url);
   }
 }
@@ -105,4 +109,11 @@ document.getElementById("transparency-toggle").addEventListener("click", event =
   button.setAttribute("aria-pressed", String(enabled));
   document.getElementById("artwork-stage").classList.toggle("show-transparency", enabled);
 });
-setLanguage(new URLSearchParams(window.location.search).get("lang"), false);
+function initialLanguage() {
+  const requested = new URLSearchParams(location.search).get('lang');
+  if (Object.hasOwn(translations, requested)) return requested;
+  try { const saved = localStorage.getItem('loginyul-language'); if (Object.hasOwn(translations, saved)) return saved; } catch (_) {}
+  return 'sr';
+}
+window.addEventListener('pageshow', () => setLanguage(initialLanguage(), false));
+setLanguage(initialLanguage(), false);
