@@ -86,6 +86,37 @@
         </article>
       </section>
 
+
+      <section class="print-preview" id="print-preview" aria-labelledby="preview-title">
+        <div class="preview-heading">
+          <p class="section-label" data-i18n="previewLabel">ВИЗУЕЛИЗАЦИЈЕ</p>
+          <h2 id="preview-title" data-i18n="previewTitle">Овако знак изгледа на стаклу.</h2>
+          <p data-i18n="previewIntro">Са провидним деловима или на белој позадини — упоредите два начина штампе.</p>
+        </div>
+        <div class="preview-carousel" role="region" aria-labelledby="preview-title" aria-roledescription="карусел" data-i18n-roledescription="carouselRole">
+          <div class="preview-choices preview-controls" role="group" aria-label="Варијанта штампе" data-i18n-label="previewChoiceLabel" hidden>
+            <button type="button" data-preview-index="0" aria-pressed="true" aria-controls="preview-transparent" data-i18n="transparentChoice">Са провидним деловима</button>
+            <button type="button" data-preview-index="1" aria-pressed="false" aria-controls="preview-white" data-i18n="whiteChoice">Бела позадина</button>
+          </div>
+          <div class="preview-stage">
+            <figure class="preview-slide" id="preview-transparent" data-preview-slide>
+              <img src="mockup-transparent.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Визуелизација знака на стакленим вратима: стакло се види кроз провидне делове, а облак и доњи део су бели." data-i18n-alt="transparentAlt">
+              <figcaption><h3 data-i18n="transparentChoice">Са провидним деловима</h3><p data-i18n="transparentCaption">Кроз провидне делове види се стакло. Облак и доњи део са натписом остају бели.</p></figcaption>
+            </figure>
+            <figure class="preview-slide" id="preview-white" data-preview-slide>
+              <img src="mockup-white.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Визуелизација знака на стакленим вратима: цела површина унутар зелене контуре има белу позадину." data-i18n-alt="whiteAlt">
+              <figcaption><h3 data-i18n="whiteChoice">Бела позадина</h3><p data-i18n="whiteCaption">Цела површина знака је непрозирна. Бела позадина обједињује облак, листове и натпис.</p></figcaption>
+            </figure>
+          </div>
+          <div class="preview-navigation preview-controls" hidden>
+            <button type="button" id="preview-previous" data-i18n="previewPrevious">Претходно</button>
+            <span class="preview-status" role="status" aria-live="polite" aria-atomic="true"></span>
+            <button type="button" id="preview-next" data-i18n="previewNext">Следеће</button>
+          </div>
+        </div>
+        <p class="preview-print-note" data-i18n="whiteFallback">Ако штампарија не може да штампа са провидним деловима или вам такав начин штампе из неког другог разлога не одговара, знак можете одштампати на белој позадини — као на другој визуелизацији.</p>
+      </section>
+
       <section class="license-section" aria-labelledby="license-title">
         <div class="license-heading">
           <span class="license-badge">CC BY 4.0</span>

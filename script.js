@@ -2,6 +2,21 @@
 
 const translations = {
   sr: {
+    previewLabel: "ВИЗУЕЛИЗАЦИЈЕ",
+    previewTitle: "Овако знак изгледа на стаклу.",
+    previewIntro: "Са провидним деловима или на белој позадини — упоредите два начина штампе.",
+    previewChoiceLabel: "Варијанта штампе",
+    carouselRole: "карусел",
+    transparentChoice: "Са провидним деловима",
+    whiteChoice: "Бела позадина",
+    transparentCaption: "Кроз провидне делове види се стакло. Облак и доњи део са натписом остају бели.",
+    whiteCaption: "Цела површина знака је непрозирна. Бела позадина обједињује облак, листове и натпис.",
+    transparentAlt: "Визуелизација знака на стакленим вратима: стакло се види кроз провидне делове, а облак и доњи део су бели.",
+    whiteAlt: "Визуелизација знака на стакленим вратима: цела површина унутар зелене контуре има белу позадину.",
+    previewPrevious: "Претходно",
+    previewNext: "Следеће",
+    previewStatus: "Варијанта {current} од {total}",
+    whiteFallback: "Ако штампарија не може да штампа са провидним деловима или вам такав начин штампе из неког другог разлога не одговара, знак можете одштампати на белој позадини — као на другој визуелизацији.",
     allProjects: "Сви пројекти ауторке",
     htmlLang: "sr-Cyrl", pageTitle: "Простор без дима — знак за преузимање",
     description: "Знак за просторе без дима и просторије са пречишћеним ваздухом. Преузмите AI и PNG. Ауторка: IULIIA LOGINOVA. Слободна употреба уз CC BY 4.0.",
@@ -24,6 +39,21 @@ const translations = {
     licenseLink: "О лиценци", sourceLink: "Извор и све датотеке", createdBy: "Ауторка знака", footer: "Чист ваздух је за све."
   },
   ru: {
+    previewLabel: "ВИЗУАЛИЗАЦИИ",
+    previewTitle: "Так знак выглядит на стекле.",
+    previewIntro: "С прозрачными участками или на белом фоне — сравните два варианта печати.",
+    previewChoiceLabel: "Вариант печати",
+    carouselRole: "карусель",
+    transparentChoice: "С прозрачностью",
+    whiteChoice: "Белый фон",
+    transparentCaption: "Сквозь прозрачные участки видно стекло. Облако и нижняя часть с надписью остаются белыми.",
+    whiteCaption: "Вся поверхность знака непрозрачна. Белый фон объединяет облако, листья и надпись.",
+    transparentAlt: "Визуализация знака на стеклянной двери: сквозь прозрачные участки видно стекло, облако и нижняя часть белые.",
+    whiteAlt: "Визуализация знака на стеклянной двери: вся поверхность внутри зелёного контура заполнена белым фоном.",
+    previewPrevious: "Назад",
+    previewNext: "Далее",
+    previewStatus: "Вариант {current} из {total}",
+    whiteFallback: "Если типография не может напечатать с прозрачными участками или такой способ печати не подходит по другим причинам, знак можно напечатать на белом фоне — как на второй визуализации.",
     allProjects: "Все проекты автора",
     htmlLang: "ru", pageTitle: "Простор без дима — скачать знак",
     description: "Знак для мест, где не курят, и помещений с очищенным воздухом. Скачать AI и PNG. Автор: IULIIA LOGINOVA. Свободное использование по CC BY 4.0.",
@@ -46,6 +76,21 @@ const translations = {
     licenseLink: "Условия лицензии", sourceLink: "Исходник и все файлы", createdBy: "Автор знака", footer: "Чистый воздух — для всех."
   },
   en: {
+    previewLabel: "VISUALIZATIONS",
+    previewTitle: "See the sign on glass.",
+    previewIntro: "With transparent areas or on a white background — compare two printing options.",
+    previewChoiceLabel: "Printing option",
+    carouselRole: "carousel",
+    transparentChoice: "Transparent areas",
+    whiteChoice: "White background",
+    transparentCaption: "The glass shows through the transparent areas. The cloud and the lower panel with the lettering stay white.",
+    whiteCaption: "The entire sign is opaque. A white background brings the cloud, leaves and lettering together.",
+    transparentAlt: "Visualization of the sign on a glass door: the glass shows through transparent areas, while the cloud and lower panel are white.",
+    whiteAlt: "Visualization of the sign on a glass door: the entire area inside the green outline has a white background.",
+    previewPrevious: "Previous",
+    previewNext: "Next",
+    previewStatus: "Option {current} of {total}",
+    whiteFallback: "If your print shop cannot print with transparent areas, or this printing method does not suit your needs for another reason, you can print the sign on a white background — as shown in the second visualization.",
     allProjects: "All projects by the creator",
     htmlLang: "en", pageTitle: "Smoke-Free Space — download the sign",
     description: "A friendly sign for smoke-free spaces and spaces with purified air. Download AI and PNG. Created by IULIIA LOGINOVA. Free to use under CC BY 4.0.",
@@ -88,6 +133,9 @@ function setLanguage(language, updateUrl = true) {
   document.querySelectorAll("[data-lang]").forEach(button => {
     button.setAttribute("aria-pressed", String(button.dataset.lang === languageKey));
   });
+  document.querySelectorAll('[data-i18n-label]').forEach(element => { element.setAttribute('aria-label', text[element.dataset.i18nLabel]); });
+  document.querySelectorAll('[data-i18n-roledescription]').forEach(element => { element.setAttribute('aria-roledescription', text[element.dataset.i18nRoledescription]); });
+  updatePreviewStatus();
   document.getElementById("license-link").href = languageKey === "ru"
     ? "https://creativecommons.org/licenses/by/4.0/deed.ru"
     : "https://creativecommons.org/licenses/by/4.0/";
@@ -109,6 +157,46 @@ document.getElementById("transparency-toggle").addEventListener("click", event =
   button.setAttribute("aria-pressed", String(enabled));
   document.getElementById("artwork-stage").classList.toggle("show-transparency", enabled);
 });
+
+let previewIndex = 0;
+const previewSlides = [...document.querySelectorAll('[data-preview-slide]')];
+const previewChoices = [...document.querySelectorAll('[data-preview-index]')];
+function updatePreviewStatus() {
+  const key = document.documentElement.lang === 'sr-Cyrl' ? 'sr' : document.documentElement.lang;
+  document.querySelector('.preview-status').textContent = translations[key].previewStatus
+    .replace('{current}', String(previewIndex + 1)).replace('{total}', String(previewSlides.length));
+}
+function showPreview(index) {
+  previewIndex = (index + previewSlides.length) % previewSlides.length;
+  previewSlides.forEach((slide, i) => { slide.hidden = i !== previewIndex; });
+  previewChoices.forEach((button, i) => { button.setAttribute('aria-pressed', String(i === previewIndex)); });
+  updatePreviewStatus();
+}
+previewChoices.forEach(button => button.addEventListener('click', () => showPreview(Number(button.dataset.previewIndex))));
+document.getElementById('preview-previous').addEventListener('click', () => showPreview(previewIndex - 1));
+document.getElementById('preview-next').addEventListener('click', () => showPreview(previewIndex + 1));
+document.querySelector('.preview-carousel').addEventListener('keydown', event => {
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
+    showPreview(previewIndex + (event.key === 'ArrowRight' ? 1 : -1));
+  }
+});
+let swipeStart = null;
+const previewStage = document.querySelector('.preview-stage');
+previewStage.addEventListener('touchstart', event => {
+  swipeStart = event.touches.length === 1 ? [event.touches[0].clientX, event.touches[0].clientY] : null;
+}, { passive: true });
+previewStage.addEventListener('touchend', event => {
+  if (!swipeStart || !event.changedTouches.length) return;
+  const dx = event.changedTouches[0].clientX - swipeStart[0];
+  const dy = event.changedTouches[0].clientY - swipeStart[1];
+  swipeStart = null;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) showPreview(previewIndex + (dx < 0 ? 1 : -1));
+}, { passive: true });
+previewStage.addEventListener('touchcancel', () => { swipeStart = null; }, { passive: true });
+document.querySelectorAll('.preview-controls').forEach(control => { control.hidden = false; });
+showPreview(0);
+
 function initialLanguage() {
   const requested = new URLSearchParams(location.search).get('lang');
   if (Object.hasOwn(translations, requested)) return requested;
